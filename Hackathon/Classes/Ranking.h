@@ -51,7 +51,7 @@ public:
     ~Ranking();
     
 public:
-    bool init();
+    bool init(cocos2d::CCScene *pScene ,cocos2d::SEL_MenuHandler menu);
     
 private:
     bool _GetRankData(std::vector<RANK_DATA> &vData);

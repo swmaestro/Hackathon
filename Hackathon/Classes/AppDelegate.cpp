@@ -40,8 +40,6 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     // create a scene. it's an autorelease object
     Ranking *pRanking = new Ranking();
-    pRanking->init();
-  
     CCScene *pScene = pRanking->GetScene();
     
 //    CCScene *pScene = MainScene::scene();
