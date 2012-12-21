@@ -42,6 +42,8 @@ private:
     
     Network                         *m_pNetwork;
     
+    
+    
 public:
     Ranking(Network *pNetwork);
     ~Ranking();
