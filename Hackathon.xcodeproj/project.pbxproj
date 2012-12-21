@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C41C0EF1684E13300D18BE7 /* libcurl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C41C0EE1684E13300D18BE7 /* libcurl.a */; };
+		3C41C1001684E14E00D18BE7 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C41C0FA1684E14E00D18BE7 /* GameScene.cpp */; };
+		3C41C1011684E14E00D18BE7 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C41C0FC1684E14E00D18BE7 /* Network.cpp */; };
+		3C41C1021684E14E00D18BE7 /* Ranking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C41C0FE1684E14E00D18BE7 /* Ranking.cpp */; };
+		3C41C10A1684E1BB00D18BE7 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1031684E1BB00D18BE7 /* background.png */; };
+		3C41C10B1684E1BB00D18BE7 /* bigLeaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1041684E1BB00D18BE7 /* bigLeaf.png */; };
+		3C41C10C1684E1BB00D18BE7 /* creditButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1051684E1BB00D18BE7 /* creditButton.png */; };
+		3C41C10D1684E1BB00D18BE7 /* leaf.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1061684E1BB00D18BE7 /* leaf.png */; };
+		3C41C10E1684E1BB00D18BE7 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1071684E1BB00D18BE7 /* menu.png */; };
+		3C41C10F1684E1BB00D18BE7 /* rankingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1081684E1BB00D18BE7 /* rankingButton.png */; };
+		3C41C1101684E1BB00D18BE7 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1091684E1BB00D18BE7 /* startButton.png */; };
 		C54788501684A69400802CD9 /* Attack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C547884E1684A69400802CD9 /* Attack.cpp */; };
 		C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788521684A7BA00802CD9 /* NormalAttack.cpp */; };
 		C547888B1684C16900802CD9 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788831684C16900802CD9 /* backButton.png */; };
@@ -217,6 +228,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C41C0E91684E12800D18BE7 /* rapidxml_iterators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_iterators.hpp; path = RapidXML/rapidxml_iterators.hpp; sourceTree = "<group>"; };
+		3C41C0EA1684E12800D18BE7 /* rapidxml_print.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_print.hpp; path = RapidXML/rapidxml_print.hpp; sourceTree = "<group>"; };
+		3C41C0EB1684E12800D18BE7 /* rapidxml_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml_utils.hpp; path = RapidXML/rapidxml_utils.hpp; sourceTree = "<group>"; };
+		3C41C0EC1684E12800D18BE7 /* rapidxml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = rapidxml.hpp; path = RapidXML/rapidxml.hpp; sourceTree = "<group>"; };
+		3C41C0EE1684E13300D18BE7 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = libCurl/iOS/libraries/libcurl.a; sourceTree = "<group>"; };
+		3C41C0F01684E13D00D18BE7 /* curl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = curl.h; path = libCurl/iOS/curl/curl.h; sourceTree = "<group>"; };
+		3C41C0F11684E13D00D18BE7 /* curlbuild.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = curlbuild.h; path = libCurl/iOS/curl/curlbuild.h; sourceTree = "<group>"; };
+		3C41C0F21684E13D00D18BE7 /* curlrules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = curlrules.h; path = libCurl/iOS/curl/curlrules.h; sourceTree = "<group>"; };
+		3C41C0F31684E13D00D18BE7 /* curlver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = curlver.h; path = libCurl/iOS/curl/curlver.h; sourceTree = "<group>"; };
+		3C41C0F41684E13D00D18BE7 /* easy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = easy.h; path = libCurl/iOS/curl/easy.h; sourceTree = "<group>"; };
+		3C41C0F51684E13D00D18BE7 /* mprintf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mprintf.h; path = libCurl/iOS/curl/mprintf.h; sourceTree = "<group>"; };
+		3C41C0F61684E13D00D18BE7 /* multi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = multi.h; path = libCurl/iOS/curl/multi.h; sourceTree = "<group>"; };
+		3C41C0F71684E13D00D18BE7 /* stdcheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = stdcheaders.h; path = libCurl/iOS/curl/stdcheaders.h; sourceTree = "<group>"; };
+		3C41C0F81684E13D00D18BE7 /* typecheck-gcc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "typecheck-gcc.h"; path = "libCurl/iOS/curl/typecheck-gcc.h"; sourceTree = "<group>"; };
+		3C41C0F91684E13D00D18BE7 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = types.h; path = libCurl/iOS/curl/types.h; sourceTree = "<group>"; };
+		3C41C0FA1684E14E00D18BE7 /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
+		3C41C0FB1684E14E00D18BE7 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
+		3C41C0FC1684E14E00D18BE7 /* Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Network.cpp; path = Classes/Network.cpp; sourceTree = "<group>"; };
+		3C41C0FD1684E14E00D18BE7 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Network.h; path = Classes/Network.h; sourceTree = "<group>"; };
+		3C41C0FE1684E14E00D18BE7 /* Ranking.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Ranking.cpp; path = Classes/Ranking.cpp; sourceTree = "<group>"; };
+		3C41C0FF1684E14E00D18BE7 /* Ranking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ranking.h; path = Classes/Ranking.h; sourceTree = "<group>"; };
+		3C41C1031684E1BB00D18BE7 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
+		3C41C1041684E1BB00D18BE7 /* bigLeaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bigLeaf.png; path = Resources/bigLeaf.png; sourceTree = "<group>"; };
+		3C41C1051684E1BB00D18BE7 /* creditButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = creditButton.png; path = Resources/creditButton.png; sourceTree = "<group>"; };
+		3C41C1061684E1BB00D18BE7 /* leaf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = leaf.png; path = Resources/leaf.png; sourceTree = "<group>"; };
+		3C41C1071684E1BB00D18BE7 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Resources/menu.png; sourceTree = "<group>"; };
+		3C41C1081684E1BB00D18BE7 /* rankingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rankingButton.png; path = Resources/rankingButton.png; sourceTree = "<group>"; };
+		3C41C1091684E1BB00D18BE7 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButton.png; path = Resources/startButton.png; sourceTree = "<group>"; };
 		C547884E1684A69400802CD9 /* Attack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attack.cpp; path = Classes/Attack.cpp; sourceTree = "<group>"; };
 		C547884F1684A69400802CD9 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attack.h; path = Classes/Attack.h; sourceTree = "<group>"; };
 		C54788521684A7BA00802CD9 /* NormalAttack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NormalAttack.cpp; path = Classes/NormalAttack.cpp; sourceTree = "<group>"; };
@@ -677,6 +716,7 @@
 				C55037151684A21700B2DD25 /* Foundation.framework in Frameworks */,
 				C55037171684A21700B2DD25 /* CoreGraphics.framework in Frameworks */,
 				C55038661684A21900B2DD25 /* libcurl.a in Frameworks */,
+				3C41C0EF1684E13300D18BE7 /* libcurl.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,6 +782,13 @@
 		C55037191684A21700B2DD25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C41C1031684E1BB00D18BE7 /* background.png */,
+				3C41C1041684E1BB00D18BE7 /* bigLeaf.png */,
+				3C41C1051684E1BB00D18BE7 /* creditButton.png */,
+				3C41C1061684E1BB00D18BE7 /* leaf.png */,
+				3C41C1071684E1BB00D18BE7 /* menu.png */,
+				3C41C1081684E1BB00D18BE7 /* rankingButton.png */,
+				3C41C1091684E1BB00D18BE7 /* startButton.png */,
 				C54788831684C16900802CD9 /* backButton.png */,
 				C54788841684C16900802CD9 /* center.png */,
 				C54788851684C16900802CD9 /* dropper.png */,
@@ -1562,6 +1609,27 @@
 		C55039A41684A21B00B2DD25 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3C41C0FA1684E14E00D18BE7 /* GameScene.cpp */,
+				3C41C0FB1684E14E00D18BE7 /* GameScene.h */,
+				3C41C0FC1684E14E00D18BE7 /* Network.cpp */,
+				3C41C0FD1684E14E00D18BE7 /* Network.h */,
+				3C41C0FE1684E14E00D18BE7 /* Ranking.cpp */,
+				3C41C0FF1684E14E00D18BE7 /* Ranking.h */,
+				3C41C0F01684E13D00D18BE7 /* curl.h */,
+				3C41C0F11684E13D00D18BE7 /* curlbuild.h */,
+				3C41C0F21684E13D00D18BE7 /* curlrules.h */,
+				3C41C0F31684E13D00D18BE7 /* curlver.h */,
+				3C41C0F41684E13D00D18BE7 /* easy.h */,
+				3C41C0F51684E13D00D18BE7 /* mprintf.h */,
+				3C41C0F61684E13D00D18BE7 /* multi.h */,
+				3C41C0F71684E13D00D18BE7 /* stdcheaders.h */,
+				3C41C0F81684E13D00D18BE7 /* typecheck-gcc.h */,
+				3C41C0F91684E13D00D18BE7 /* types.h */,
+				3C41C0EE1684E13300D18BE7 /* libcurl.a */,
+				3C41C0E91684E12800D18BE7 /* rapidxml_iterators.hpp */,
+				3C41C0EA1684E12800D18BE7 /* rapidxml_print.hpp */,
+				3C41C0EB1684E12800D18BE7 /* rapidxml_utils.hpp */,
+				3C41C0EC1684E12800D18BE7 /* rapidxml.hpp */,
 				C54788551684A7D400802CD9 /* Attack */,
 				C55039A51684A21B00B2DD25 /* AppDelegate.h */,
 				C55039A61684A21B00B2DD25 /* AppDelegate.cpp */,
@@ -1644,6 +1712,13 @@
 				C54788901684C16900802CD9 /* slime2.png in Resources */,
 				C54788911684C16900802CD9 /* slime3.png in Resources */,
 				C54788921684C16900802CD9 /* slime4.png in Resources */,
+				3C41C10A1684E1BB00D18BE7 /* background.png in Resources */,
+				3C41C10B1684E1BB00D18BE7 /* bigLeaf.png in Resources */,
+				3C41C10C1684E1BB00D18BE7 /* creditButton.png in Resources */,
+				3C41C10D1684E1BB00D18BE7 /* leaf.png in Resources */,
+				3C41C10E1684E1BB00D18BE7 /* menu.png in Resources */,
+				3C41C10F1684E1BB00D18BE7 /* rankingButton.png in Resources */,
+				3C41C1101684E1BB00D18BE7 /* startButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1831,6 +1906,9 @@
 				C55039B21684A24A00B2DD25 /* MainScene.cpp in Sources */,
 				C54788501684A69400802CD9 /* Attack.cpp in Sources */,
 				C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */,
+				3C41C1001684E14E00D18BE7 /* GameScene.cpp in Sources */,
+				3C41C1011684E14E00D18BE7 /* Network.cpp in Sources */,
+				3C41C1021684E14E00D18BE7 /* Ranking.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1911,6 +1989,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hackathon/libs/cocos2dx/platform/third_party/ios/libraries\"",
+					"\"$(SRCROOT)/Hackathon/libCurl/iOS/libraries\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
@@ -1934,6 +2013,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hackathon/libs/cocos2dx/platform/third_party/ios/libraries\"",
+					"\"$(SRCROOT)/Hackathon/libCurl/iOS/libraries\"",
 				);
 				OTHER_LDFLAGS = (
 					"-lxml2",
