@@ -26,8 +26,8 @@ public:
     virtual void rotate(float r);
     
 private:
-    CCSprite * sprite;
-    float angle;
+    CCSprite * laser;
+    float angle, distance, time;
     bool isHit;
 };
 

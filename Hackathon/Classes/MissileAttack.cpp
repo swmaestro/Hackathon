@@ -13,10 +13,16 @@ bool MissileAttack::init()
     if (!Attack::init())
         return false;
     
+    missile = CCSprite::create("missile.png");
+    addChild(missile);
+    
+    aim = CCSprite::create("leaf.png");
+    addChild(aim);
+    
     isHit = false;
     
     angle = 0;
-    distance = 400;
+    distance = 1600;
     
     resetPosition();
     scheduleUpdate();
@@ -61,4 +67,9 @@ void MissileAttack::rotate(float r)
     angle += r;
     
     resetPosition();
+}
+
+bool MissileAttack::hit(cocos2d::CCSprite *player)
+{
+    return false;
 }

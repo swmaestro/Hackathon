@@ -39,14 +39,15 @@ bool AppDelegate::applicationDidFinishLaunching()
     srand(time(NULL));
     
     // create a scene. it's an autorelease object
+/*
     Network *pNetwork = new Network;
     Ranking *pRanking = new Ranking(pNetwork);
     pRanking->init();
   
     CCScene *pScene = pRanking->GetScene();
-    
-//    CCScene *pScene = MainScene::scene();
-
+/*/
+    CCScene *pScene = MainScene::scene();
+//*/
     // run
     pDirector->runWithScene(pScene);
 

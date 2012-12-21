@@ -14,7 +14,7 @@
 class MissileAttack : public Attack
 {
 public:
-    //CREATE_FUNC(MissileAttack);
+    CREATE_FUNC(MissileAttack);
     bool init();
     
     void resetPosition();
@@ -22,7 +22,7 @@ public:
     void update(float dt);
     
     virtual bool enable();
-    //virtual bool hit(cocos2d::CCSprite * player);
+    virtual bool hit(cocos2d::CCSprite * player);
     virtual void rotate(float r);
     
 private:

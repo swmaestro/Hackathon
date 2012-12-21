@@ -18,7 +18,7 @@
 		3C41C10E1684E1BB00D18BE7 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1071684E1BB00D18BE7 /* menu.png */; };
 		3C41C10F1684E1BB00D18BE7 /* rankingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1081684E1BB00D18BE7 /* rankingButton.png */; };
 		3C41C1101684E1BB00D18BE7 /* startButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1091684E1BB00D18BE7 /* startButton.png */; };
-		3C41C1141684E8C000D18BE7 /* misile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1131684E8C000D18BE7 /* misile.png */; };
+		3C41C1141684E8C000D18BE7 /* missile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1131684E8C000D18BE7 /* missile.png */; };
 		3C41C1161684E9D700D18BE7 /* fork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1151684E9D600D18BE7 /* fork.png */; };
 		C54788501684A69400802CD9 /* Attack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C547884E1684A69400802CD9 /* Attack.cpp */; };
 		C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788521684A7BA00802CD9 /* NormalAttack.cpp */; };
@@ -260,7 +260,7 @@
 		3C41C1071684E1BB00D18BE7 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = menu.png; path = Resources/menu.png; sourceTree = "<group>"; };
 		3C41C1081684E1BB00D18BE7 /* rankingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rankingButton.png; path = Resources/rankingButton.png; sourceTree = "<group>"; };
 		3C41C1091684E1BB00D18BE7 /* startButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = startButton.png; path = Resources/startButton.png; sourceTree = "<group>"; };
-		3C41C1131684E8C000D18BE7 /* misile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = misile.png; path = Resources/misile.png; sourceTree = "<group>"; };
+		3C41C1131684E8C000D18BE7 /* missile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = missile.png; path = Resources/missile.png; sourceTree = "<group>"; };
 		3C41C1151684E9D600D18BE7 /* fork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fork.png; path = Resources/fork.png; sourceTree = "<group>"; };
 		C547884E1684A69400802CD9 /* Attack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attack.cpp; path = Classes/Attack.cpp; sourceTree = "<group>"; };
 		C547884F1684A69400802CD9 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attack.h; path = Classes/Attack.h; sourceTree = "<group>"; };
@@ -826,7 +826,7 @@
 			isa = PBXGroup;
 			children = (
 				3C41C1151684E9D600D18BE7 /* fork.png */,
-				3C41C1131684E8C000D18BE7 /* misile.png */,
+				3C41C1131684E8C000D18BE7 /* missile.png */,
 				3C41C1031684E1BB00D18BE7 /* background.png */,
 				3C41C1041684E1BB00D18BE7 /* bigLeaf.png */,
 				3C41C1051684E1BB00D18BE7 /* creditButton.png */,
@@ -1751,7 +1751,7 @@
 				3C41C10E1684E1BB00D18BE7 /* menu.png in Resources */,
 				3C41C10F1684E1BB00D18BE7 /* rankingButton.png in Resources */,
 				3C41C1101684E1BB00D18BE7 /* startButton.png in Resources */,
-				3C41C1141684E8C000D18BE7 /* misile.png in Resources */,
+				3C41C1141684E8C000D18BE7 /* missile.png in Resources */,
 				3C41C1161684E9D700D18BE7 /* fork.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

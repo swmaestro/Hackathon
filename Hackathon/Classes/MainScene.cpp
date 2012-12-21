@@ -7,7 +7,10 @@
 //
 
 #include "MainScene.h"
+
 #include "NormalAttack.h"
+#include "MissileAttack.h"
+#include "LaserAttack.h"
 
 using namespace cocos2d;
 
@@ -36,7 +39,7 @@ bool MainScene::init()
     
     center = CCSprite::create("center.png");
     center->setPosition(CCPoint(0, 0));
-    platform->addChild(center);
+    platform->addChild(center, 1);
     
     for (int i = 0; i < 4; ++i)
     {
@@ -66,7 +69,17 @@ void MainScene::update(float dt)
     t += dt;
     if (t > 0.25)
     {
-        NormalAttack * attack = NormalAttack::create();
+        float r = CCRANDOM_0_1();
+
+        Attack * attack;
+        
+        if (r < 0.8)
+            attack = NormalAttack::create();
+        else if (r < 0.9)
+            attack = MissileAttack::create();
+        else
+            attack = LaserAttack::create();
+        
         attacks.push_back(attack);
         platform->addChild(attack);
         t = 0;
@@ -80,7 +93,7 @@ void MainScene::update(float dt)
         }
     
     static float sl = 0;
-    sl += dt;
+    sl += dt * 30;
     if (sl >= 4)
         sl = 0;
     slime->setTexture(slimeTex[(int)sl]);
