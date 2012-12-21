@@ -11,6 +11,8 @@
 #include "cocos2d.h"
 #include "MainScene.h"
 
+#include "Ranking.h"
+
 USING_NS_CC;
 
 AppDelegate::AppDelegate()
@@ -37,7 +39,13 @@ bool AppDelegate::applicationDidFinishLaunching()
     srand(time(NULL));
     
     // create a scene. it's an autorelease object
-    CCScene *pScene = MainScene::scene();
+    Network *pNetwork = new Network;
+    Ranking *pRanking = new Ranking(pNetwork);
+    pRanking->init();
+  
+    CCScene *pScene = pRanking->GetScene();
+    
+//    CCScene *pScene = MainScene::scene();
 
     // run
     pDirector->runWithScene(pScene);
