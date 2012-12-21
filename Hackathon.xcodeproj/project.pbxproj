@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54788501684A69400802CD9 /* Attack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C547884E1684A69400802CD9 /* Attack.cpp */; };
+		C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788521684A7BA00802CD9 /* NormalAttack.cpp */; };
+		C547888B1684C16900802CD9 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788831684C16900802CD9 /* backButton.png */; };
+		C547888C1684C16900802CD9 /* center.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788841684C16900802CD9 /* center.png */; };
+		C547888D1684C16900802CD9 /* dropper.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788851684C16900802CD9 /* dropper.png */; };
+		C547888E1684C16900802CD9 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788861684C16900802CD9 /* ranking.png */; };
+		C547888F1684C16900802CD9 /* slime1.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788871684C16900802CD9 /* slime1.png */; };
+		C54788901684C16900802CD9 /* slime2.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788881684C16900802CD9 /* slime2.png */; };
+		C54788911684C16900802CD9 /* slime3.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788891684C16900802CD9 /* slime3.png */; };
+		C54788921684C16900802CD9 /* slime4.png in Resources */ = {isa = PBXBuildFile; fileRef = C547888A1684C16900802CD9 /* slime4.png */; };
 		C55037091684A21700B2DD25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55037081684A21700B2DD25 /* QuartzCore.framework */; };
 		C550370B1684A21700B2DD25 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C550370A1684A21700B2DD25 /* OpenGLES.framework */; };
 		C550370D1684A21700B2DD25 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C550370C1684A21700B2DD25 /* OpenAL.framework */; };
@@ -202,9 +212,23 @@
 		C550399E1684A21B00B2DD25 /* HttpClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C550399D1684A21B00B2DD25 /* HttpClient.cpp */; };
 		C55039A71684A21B00B2DD25 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C55039A61684A21B00B2DD25 /* AppDelegate.cpp */; };
 		C55039AA1684A21B00B2DD25 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C55039A91684A21B00B2DD25 /* HelloWorldScene.cpp */; };
+		C55039B21684A24A00B2DD25 /* MainScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C55039B01684A24A00B2DD25 /* MainScene.cpp */; };
+		C55039B41684A3C300B2DD25 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C55039B31684A3C300B2DD25 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C547884E1684A69400802CD9 /* Attack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attack.cpp; path = Classes/Attack.cpp; sourceTree = "<group>"; };
+		C547884F1684A69400802CD9 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attack.h; path = Classes/Attack.h; sourceTree = "<group>"; };
+		C54788521684A7BA00802CD9 /* NormalAttack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NormalAttack.cpp; path = Classes/NormalAttack.cpp; sourceTree = "<group>"; };
+		C54788531684A7BA00802CD9 /* NormalAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NormalAttack.h; path = Classes/NormalAttack.h; sourceTree = "<group>"; };
+		C54788831684C16900802CD9 /* backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backButton.png; path = Resources/backButton.png; sourceTree = "<group>"; };
+		C54788841684C16900802CD9 /* center.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = center.png; path = Resources/center.png; sourceTree = "<group>"; };
+		C54788851684C16900802CD9 /* dropper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dropper.png; path = Resources/dropper.png; sourceTree = "<group>"; };
+		C54788861684C16900802CD9 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ranking.png; path = Resources/ranking.png; sourceTree = "<group>"; };
+		C54788871684C16900802CD9 /* slime1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime1.png; path = Resources/slime1.png; sourceTree = "<group>"; };
+		C54788881684C16900802CD9 /* slime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime2.png; path = Resources/slime2.png; sourceTree = "<group>"; };
+		C54788891684C16900802CD9 /* slime3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime3.png; path = Resources/slime3.png; sourceTree = "<group>"; };
+		C547888A1684C16900802CD9 /* slime4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime4.png; path = Resources/slime4.png; sourceTree = "<group>"; };
 		C55037041684A21700B2DD25 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55037081684A21700B2DD25 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C550370A1684A21700B2DD25 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -634,6 +658,9 @@
 		C55039A61684A21B00B2DD25 /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		C55039A81684A21B00B2DD25 /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		C55039A91684A21B00B2DD25 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		C55039B01684A24A00B2DD25 /* MainScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MainScene.cpp; path = Classes/MainScene.cpp; sourceTree = "<group>"; };
+		C55039B11684A24A00B2DD25 /* MainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainScene.h; path = Classes/MainScene.h; sourceTree = "<group>"; };
+		C55039B31684A3C300B2DD25 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -656,9 +683,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54788551684A7D400802CD9 /* Attack */ = {
+			isa = PBXGroup;
+			children = (
+				C547884E1684A69400802CD9 /* Attack.cpp */,
+				C547884F1684A69400802CD9 /* Attack.h */,
+				C54788521684A7BA00802CD9 /* NormalAttack.cpp */,
+				C54788531684A7BA00802CD9 /* NormalAttack.h */,
+			);
+			name = Attack;
+			sourceTree = "<group>";
+		};
 		C55036F91684A21700B2DD25 = {
 			isa = PBXGroup;
 			children = (
+				C55039B31684A3C300B2DD25 /* Default-568h@2x.png */,
 				C55037181684A21700B2DD25 /* Hackathon */,
 				C55037071684A21700B2DD25 /* Frameworks */,
 				C55037051684A21700B2DD25 /* Products */,
@@ -703,6 +742,14 @@
 		C55037191684A21700B2DD25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C54788831684C16900802CD9 /* backButton.png */,
+				C54788841684C16900802CD9 /* center.png */,
+				C54788851684C16900802CD9 /* dropper.png */,
+				C54788861684C16900802CD9 /* ranking.png */,
+				C54788871684C16900802CD9 /* slime1.png */,
+				C54788881684C16900802CD9 /* slime2.png */,
+				C54788891684C16900802CD9 /* slime3.png */,
+				C547888A1684C16900802CD9 /* slime4.png */,
 				C550371A1684A21700B2DD25 /* CloseNormal.png */,
 				C550371C1684A21700B2DD25 /* CloseSelected.png */,
 				C550371E1684A21700B2DD25 /* Default.png */,
@@ -1515,10 +1562,13 @@
 		C55039A41684A21B00B2DD25 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C54788551684A7D400802CD9 /* Attack */,
 				C55039A51684A21B00B2DD25 /* AppDelegate.h */,
 				C55039A61684A21B00B2DD25 /* AppDelegate.cpp */,
 				C55039A81684A21B00B2DD25 /* HelloWorldScene.h */,
 				C55039A91684A21B00B2DD25 /* HelloWorldScene.cpp */,
+				C55039B01684A24A00B2DD25 /* MainScene.cpp */,
+				C55039B11684A24A00B2DD25 /* MainScene.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1585,6 +1635,15 @@
 				C550372D1684A21700B2DD25 /* Icon@2x.png in Resources */,
 				C550372F1684A21700B2DD25 /* iTunesArtwork in Resources */,
 				C55037C11684A21800B2DD25 /* ChangeLog in Resources */,
+				C55039B41684A3C300B2DD25 /* Default-568h@2x.png in Resources */,
+				C547888B1684C16900802CD9 /* backButton.png in Resources */,
+				C547888C1684C16900802CD9 /* center.png in Resources */,
+				C547888D1684C16900802CD9 /* dropper.png in Resources */,
+				C547888E1684C16900802CD9 /* ranking.png in Resources */,
+				C547888F1684C16900802CD9 /* slime1.png in Resources */,
+				C54788901684C16900802CD9 /* slime2.png in Resources */,
+				C54788911684C16900802CD9 /* slime3.png in Resources */,
+				C54788921684C16900802CD9 /* slime4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1769,6 +1828,9 @@
 				C550399E1684A21B00B2DD25 /* HttpClient.cpp in Sources */,
 				C55039A71684A21B00B2DD25 /* AppDelegate.cpp in Sources */,
 				C55039AA1684A21B00B2DD25 /* HelloWorldScene.cpp in Sources */,
+				C55039B21684A24A00B2DD25 /* MainScene.cpp in Sources */,
+				C54788501684A69400802CD9 /* Attack.cpp in Sources */,
+				C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1845,6 +1907,7 @@
 				GCC_PREFIX_HEADER = Hackathon/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = Hackathon/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hackathon/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -1867,6 +1930,7 @@
 				GCC_PREFIX_HEADER = Hackathon/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				INFOPLIST_FILE = Hackathon/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Hackathon/libs/cocos2dx/platform/third_party/ios/libraries\"",
@@ -1900,6 +1964,7 @@
 				C55039AF1684A21B00B2DD25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
