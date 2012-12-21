@@ -13,7 +13,7 @@ using namespace cocos2d;
 using namespace rapidxml;
 using namespace std;
 
-Ranking::Ranking(Network *pNetwork)
+Ranking::Ranking()
 {
     for(int i=0; i<9; ++i)
     {
@@ -77,6 +77,9 @@ bool Ranking::init()
         addChild(m_pPlayerName[i]);
         addChild(m_pPlayerScore[i]);
     }
+    
+    m_pMenu = new CCMenu;
+    
     
     return true;
 }
