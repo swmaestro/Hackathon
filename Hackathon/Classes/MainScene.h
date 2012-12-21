@@ -40,6 +40,9 @@ private:
     
     std::list<Attack *> attacks;
     CCSprite *pBackEffect;
+    
+public:
+    void _backEffect(cocos2d::CCObject *pSender);
 };
 
 #endif /* defined(__Hackathon__MainScene__) */

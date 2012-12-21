@@ -61,7 +61,8 @@ bool MainScene::init()
     pBackEffect->setPosition(ccp(winSize.width / 2, winSize.height / 4));
     pBackEffect->setScale(1.5);
     center->addChild(pBackEffect, -10);
-
+    
+    schedule(schedule_selector(MainScene::_backEffect), 1/60.f);
     return true;
 }
 
@@ -148,4 +149,15 @@ void MainScene::ccTouchEnded(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 void MainScene::ccTouchCancelled(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 {
     rotate = 0;
+}
+
+void MainScene::_backEffect(cocos2d::CCObject *pSender)
+{
+    static bool isMinus = true;
+    GLubyte opacity = pBackEffect->getOpacity();
+    
+    if(opacity == 255)      isMinus = true;
+    else if(opacity == 0)   isMinus = false;
+    
+    pBackEffect->setOpacity(opacity +  17*(1 - 2*isMinus)*2 );
 }
