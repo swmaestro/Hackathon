@@ -42,6 +42,15 @@ private:
     CCSprite *pBackEffect;
     cocos2d::CCParticleFlower*    m_pFlower;
     
+private:
+    cocos2d::CCLabelTTF           *pScore;
+    cocos2d::CCLabelTTF           *pLife;
+    
+private:
+    int     m_life;
+    int     m_score;
+    bool    m_isGameOver;
+    
 public:
     void _backEffect(cocos2d::CCObject *pSender);
     

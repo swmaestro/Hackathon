@@ -28,9 +28,20 @@ bool MainScene::init()
     if (!CCLayer::init())
         return false;
     
+    m_life = 100;
+    m_score = 0;
+    m_isGameOver = false;
+
     CCSize winSize = CCDirector::sharedDirector()->getWinSize();
     
     rotate = 0;
+    
+    pScore = CCLabelTTF::create("0", "MarkerFelt", 60);
+    pScore->setColor(ccc3(0, 0, 0));
+    
+    pLife = CCLabelTTF::create("100", "MarkerFelt", 30);
+    pLife->setPosition(ccp(120, 340));
+    pLife->setColor(ccc3(255, 0, 0));
     
     platform = CCLayer::create();
     platform->setAnchorPoint(CCPoint(0.5, 0.5));
@@ -43,6 +54,8 @@ bool MainScene::init()
     center = CCSprite::create("center.png");
     center->setPosition(CCPoint(0, 0));
     platform->addChild(center, 3);
+    platform->addChild(pScore, 4);
+    platform->addChild(pLife, 5);
     
     for (int i = 0; i < 4; ++i)
     {
@@ -71,6 +84,8 @@ bool MainScene::init()
 
 void MainScene::update(float dt)
 {
+    if(m_isGameOver) return;
+    
     center->setRotation(center->getRotation() - rotate * 50 * dt);
     pBackEffect->setRotation(center->getRotation());
     background->setRotation(background->getRotation() - rotate * 10 * dt);
@@ -107,6 +122,22 @@ void MainScene::update(float dt)
             CCTintTo * to = CCTintTo::create(0.125f, 255, 0, 0);
             CCTintTo * back = CCTintTo::create(0.125f, 255, 255, 255);
             CCAction * seq = CCSequence::create(to, back, NULL);
+
+            if( m_life > 0 )    m_life-= 30;
+            else
+            {
+                m_isGameOver = true;
+                //게임오버 문구 출력
+            }
+            
+            m_score -= 200;
+            
+            char num[20];
+            sprintf(num, "%d", m_score);
+            pScore->setString(num);
+            
+            sprintf(num, "%d", m_life);
+            pLife->setString(num);
             
             background->runAction(seq);
         }
@@ -127,6 +158,18 @@ void MainScene::update(float dt)
             _particleEffect((*i)->getPosition());
             platform->removeChild(*i, true);
             attacks.remove(*i);
+            
+            if(m_life < 100)        ++m_life;
+            else                    m_life = 100;
+
+            ++m_score;
+            
+            char num[20];
+            sprintf(num, "%d", m_score);
+            pScore->setString(num);
+
+            sprintf(num, "%d", m_life);
+            pLife->setString(num);
         }
     }
 }

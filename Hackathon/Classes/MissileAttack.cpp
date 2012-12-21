@@ -17,6 +17,8 @@ bool MissileAttack::init()
     addChild(missile);
     
     aim = CCSprite::create("aim.png");
+    aim->setColor(ccc3(255, 0, 0));
+    aim->setScale(1.5f);
     addChild(aim);
     
     isHit = false;
