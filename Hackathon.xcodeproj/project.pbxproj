@@ -1932,14 +1932,11 @@
 				C55039B21684A24A00B2DD25 /* MainScene.cpp in Sources */,
 				C54788501684A69400802CD9 /* Attack.cpp in Sources */,
 				C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */,
-<<<<<<< HEAD
 				C54788951684DF5100802CD9 /* MissileAttack.cpp in Sources */,
 				C54788981684DF7E00802CD9 /* LaserAttack.cpp in Sources */,
-=======
 				3C41C1001684E14E00D18BE7 /* GameScene.cpp in Sources */,
 				3C41C1011684E14E00D18BE7 /* Network.cpp in Sources */,
 				3C41C1021684E14E00D18BE7 /* Ranking.cpp in Sources */,
->>>>>>> e62089e90b1d4a208cd76bf02704e5e26a28d9ea
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
