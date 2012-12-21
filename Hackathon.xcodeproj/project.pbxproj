@@ -723,6 +723,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C41C1111684E2B100D18BE7 /* CURL */ = {
+			isa = PBXGroup;
+			children = (
+				3C41C0F01684E13D00D18BE7 /* curl.h */,
+				3C41C0F11684E13D00D18BE7 /* curlbuild.h */,
+				3C41C0F21684E13D00D18BE7 /* curlrules.h */,
+				3C41C0F31684E13D00D18BE7 /* curlver.h */,
+				3C41C0F41684E13D00D18BE7 /* easy.h */,
+				3C41C0F51684E13D00D18BE7 /* mprintf.h */,
+				3C41C0F61684E13D00D18BE7 /* multi.h */,
+				3C41C0F71684E13D00D18BE7 /* stdcheaders.h */,
+				3C41C0F81684E13D00D18BE7 /* typecheck-gcc.h */,
+				3C41C0F91684E13D00D18BE7 /* types.h */,
+				3C41C0EE1684E13300D18BE7 /* libcurl.a */,
+			);
+			name = CURL;
+			sourceTree = "<group>";
+		};
+		3C41C1121684E2BD00D18BE7 /* RAPID */ = {
+			isa = PBXGroup;
+			children = (
+				3C41C0E91684E12800D18BE7 /* rapidxml_iterators.hpp */,
+				3C41C0EA1684E12800D18BE7 /* rapidxml_print.hpp */,
+				3C41C0EB1684E12800D18BE7 /* rapidxml_utils.hpp */,
+				3C41C0EC1684E12800D18BE7 /* rapidxml.hpp */,
+			);
+			name = RAPID;
+			sourceTree = "<group>";
+		};
 		C54788551684A7D400802CD9 /* Attack */ = {
 			isa = PBXGroup;
 			children = (
@@ -1609,27 +1638,14 @@
 		C55039A41684A21B00B2DD25 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3C41C1121684E2BD00D18BE7 /* RAPID */,
+				3C41C1111684E2B100D18BE7 /* CURL */,
 				3C41C0FA1684E14E00D18BE7 /* GameScene.cpp */,
 				3C41C0FB1684E14E00D18BE7 /* GameScene.h */,
 				3C41C0FC1684E14E00D18BE7 /* Network.cpp */,
 				3C41C0FD1684E14E00D18BE7 /* Network.h */,
 				3C41C0FE1684E14E00D18BE7 /* Ranking.cpp */,
 				3C41C0FF1684E14E00D18BE7 /* Ranking.h */,
-				3C41C0F01684E13D00D18BE7 /* curl.h */,
-				3C41C0F11684E13D00D18BE7 /* curlbuild.h */,
-				3C41C0F21684E13D00D18BE7 /* curlrules.h */,
-				3C41C0F31684E13D00D18BE7 /* curlver.h */,
-				3C41C0F41684E13D00D18BE7 /* easy.h */,
-				3C41C0F51684E13D00D18BE7 /* mprintf.h */,
-				3C41C0F61684E13D00D18BE7 /* multi.h */,
-				3C41C0F71684E13D00D18BE7 /* stdcheaders.h */,
-				3C41C0F81684E13D00D18BE7 /* typecheck-gcc.h */,
-				3C41C0F91684E13D00D18BE7 /* types.h */,
-				3C41C0EE1684E13300D18BE7 /* libcurl.a */,
-				3C41C0E91684E12800D18BE7 /* rapidxml_iterators.hpp */,
-				3C41C0EA1684E12800D18BE7 /* rapidxml_print.hpp */,
-				3C41C0EB1684E12800D18BE7 /* rapidxml_utils.hpp */,
-				3C41C0EC1684E12800D18BE7 /* rapidxml.hpp */,
 				C54788551684A7D400802CD9 /* Attack */,
 				C55039A51684A21B00B2DD25 /* AppDelegate.h */,
 				C55039A61684A21B00B2DD25 /* AppDelegate.cpp */,
