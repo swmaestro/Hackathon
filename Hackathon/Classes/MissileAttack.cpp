@@ -58,13 +58,13 @@ bool MissileAttack::enable()
 {
     if (distance < 120)
     {
-        CCPoint p(0, -20);
+        CCPoint p(0, -10);
         CCAffineTransform transform = CCAffineTransformRotate(CCAffineTransformIdentity, angle);
         p = CCPointApplyAffineTransform(p, transform);
-        CCMoveBy * move = CCMoveBy::create(0.5f, p);
-        CCMoveBy * rev = CCMoveBy::create(0.5f, CCPoint(-p.x, -p.y));
-        CCAction * seq = CCSequence::create(move, rev);
-        getParent()->runAction(move);
+        CCMoveBy * move = CCMoveBy::create(0.1f, p);
+        CCActionInterval * rev = move->reverse();
+        CCAction * seq = CCSequence::create(move, rev, NULL);
+        getParent()->runAction(seq);
         return false;
     }
     

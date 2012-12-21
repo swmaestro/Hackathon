@@ -42,7 +42,7 @@ bool MainScene::init()
     
     center = CCSprite::create("center.png");
     center->setPosition(CCPoint(0, 0));
-    platform->addChild(center, 2);
+    platform->addChild(center, 3);
     
     for (int i = 0; i < 4; ++i)
     {
@@ -53,17 +53,16 @@ bool MainScene::init()
     slime = CCSprite::createWithTexture(slimeTex[0]);
     slime->setAnchorPoint(CCPoint(0.5, 0.2));
     slime->setPosition(CCPoint(0, 120));
-    platform->addChild(slime, 3);
+    platform->addChild(slime, 4);
     
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
     
     scheduleUpdate();
     
     pBackEffect = CCSprite::create("bigLeaf.png");
-    pBackEffect->setAnchorPoint(ccp(0.6,0.5));
-    pBackEffect->setPosition(ccp(winSize.width / 2, winSize.height / 4));
+    pBackEffect->setAnchorPoint(ccp(0.5,0.5));
     pBackEffect->setScale(1.5);
-    center->addChild(pBackEffect, -10);
+    platform->addChild(pBackEffect, 1);
 
     return true;
 }
@@ -71,6 +70,7 @@ bool MainScene::init()
 void MainScene::update(float dt)
 {
     center->setRotation(center->getRotation() - rotate * 50 * dt);
+    pBackEffect->setRotation(center->getRotation());
     background->setRotation(background->getRotation() - rotate * 10 * dt);
     for (std::list<Attack *>::iterator i = attacks.begin(), next; i != attacks.end(); ++i)
         (*i)->rotate(rotate * 50 * dt * M_PI / 180);
@@ -91,7 +91,7 @@ void MainScene::update(float dt)
             attack = LaserAttack::create();
         
         attacks.push_back(attack);
-        platform->addChild(attack, 1);
+        platform->addChild(attack, 2);
         t = 0;
     }
     
