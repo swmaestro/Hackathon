@@ -16,7 +16,7 @@ bool MissileAttack::init()
     missile = CCSprite::create("missile.png");
     addChild(missile);
     
-    aim = CCSprite::create("leaf.png");
+    aim = CCSprite::create("aim.png");
     addChild(aim);
     
     isHit = false;
@@ -57,7 +57,16 @@ void MissileAttack::update(float dt)
 bool MissileAttack::enable()
 {
     if (distance < 120)
+    {
+        CCPoint p(0, -20);
+        CCAffineTransform transform = CCAffineTransformRotate(CCAffineTransformIdentity, angle);
+        p = CCPointApplyAffineTransform(p, transform);
+        CCMoveBy * move = CCMoveBy::create(0.5f, p);
+        CCMoveBy * rev = CCMoveBy::create(0.5f, CCPoint(-p.x, -p.y));
+        CCAction * seq = CCSequence::create(move, rev);
+        getParent()->runAction(move);
         return false;
+    }
     
     return true;
 }

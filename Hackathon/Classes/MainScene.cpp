@@ -37,9 +37,12 @@ bool MainScene::init()
     platform->setPosition(CCPoint(winSize.width / 2, winSize.height / 4));
     addChild(platform);
     
+    background = CCSprite::create("background.png");
+    platform->addChild(background, 0);
+    
     center = CCSprite::create("center.png");
     center->setPosition(CCPoint(0, 0));
-    platform->addChild(center, 1);
+    platform->addChild(center, 2);
     
     for (int i = 0; i < 4; ++i)
     {
@@ -50,7 +53,7 @@ bool MainScene::init()
     slime = CCSprite::createWithTexture(slimeTex[0]);
     slime->setAnchorPoint(CCPoint(0.5, 0.2));
     slime->setPosition(CCPoint(0, 120));
-    platform->addChild(slime);
+    platform->addChild(slime, 3);
     
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
     
@@ -62,26 +65,27 @@ bool MainScene::init()
 void MainScene::update(float dt)
 {
     center->setRotation(center->getRotation() - rotate * 50 * dt);
+    background->setRotation(background->getRotation() - rotate * 10 * dt);
     for (std::list<Attack *>::iterator i = attacks.begin(), next; i != attacks.end(); ++i)
         (*i)->rotate(rotate * 50 * dt * M_PI / 180);
     
     static float t = 0;
     t += dt;
-    if (t > 0.25)
+    if (t > 0.05)
     {
         float r = CCRANDOM_0_1();
 
         Attack * attack;
         
-        if (r < 0.8)
+        if (r < 0.95)
             attack = NormalAttack::create();
-        else if (r < 0.9)
+        else if (r < 0.975)
             attack = MissileAttack::create();
         else
             attack = LaserAttack::create();
         
         attacks.push_back(attack);
-        platform->addChild(attack);
+        platform->addChild(attack, 1);
         t = 0;
     }
     
