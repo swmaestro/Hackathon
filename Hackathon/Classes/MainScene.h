@@ -39,6 +39,7 @@ private:
     CCTexture2D * slimeTex[4];
     
     std::list<Attack *> attacks;
+    CCSprite *pBackEffect;
 };
 
 #endif /* defined(__Hackathon__MainScene__) */

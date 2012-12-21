@@ -58,6 +58,12 @@ bool MainScene::init()
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
     
     scheduleUpdate();
+    
+    pBackEffect = CCSprite::create("bigLeaf.png");
+    pBackEffect->setAnchorPoint(ccp(0.6,0.5));
+    pBackEffect->setPosition(ccp(winSize.width / 2, winSize.height / 4));
+    pBackEffect->setScale(1.5);
+    center->addChild(pBackEffect, -10);
 
     return true;
 }
