@@ -86,14 +86,16 @@ void MainScene::update(float dt)
         Attack * attack;
         
         if (r < 0.95)
-            attack = NormalAttack::create();
+            attack = NormalAttack::create(),
+            platform->addChild(attack, 1);
         else if (r < 0.975)
-            attack = MissileAttack::create();
+            attack = MissileAttack::create(),
+            platform->addChild(attack, 5);
         else
-            attack = LaserAttack::create();
+            attack = LaserAttack::create(),
+            platform->addChild(attack, 5);
         
         attacks.push_back(attack);
-        platform->addChild(attack, 2);
         t = 0;
     }
     
@@ -102,6 +104,11 @@ void MainScene::update(float dt)
         {
             static int hit = 0;
             printf("HIT!!!!%d\n", ++hit);
+            CCTintTo * to = CCTintTo::create(0.125f, 255, 0, 0);
+            CCTintTo * back = CCTintTo::create(0.125f, 255, 255, 255);
+            CCAction * seq = CCSequence::create(to, back, NULL);
+            
+            background->runAction(seq);
         }
     
     static float sl = 0;

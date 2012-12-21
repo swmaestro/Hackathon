@@ -20,6 +20,7 @@ bool NormalAttack::init()
     
     angle = CCRANDOM_0_1() * 2 * M_PI;
     distance = 400;
+    speed = 150 + CCRANDOM_0_1() * 50;
     
     resetPosition();
     scheduleUpdate();
@@ -38,7 +39,7 @@ void NormalAttack::resetPosition()
 
 void NormalAttack::update(float dt)
 {
-    distance -= dt * 200;
+    distance -= dt * speed;
     
     resetPosition();
 }
@@ -62,7 +63,7 @@ bool NormalAttack::hit(CCSprite * player)
 
     float dist = sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2));
     
-    if (dist < player->getTexture()->getContentSize().width / 2 + sprite->getTexture()->getContentSize().width / 2)
+    if (dist < player->getContentSize().width / 4 + sprite->getContentSize().width / 4)
         return isHit = true;
     
     return false;

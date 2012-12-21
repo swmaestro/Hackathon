@@ -30,6 +30,7 @@ private:
     
     float angle;
     float distance;
+    float speed;
     
     bool isHit;
 };

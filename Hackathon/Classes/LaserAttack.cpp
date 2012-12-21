@@ -66,5 +66,9 @@ void LaserAttack::rotate(float r)
 
 bool LaserAttack::hit(cocos2d::CCSprite *player)
 {
+    if (isHit)
+        return false;
+    
+    
     return false;
 }
