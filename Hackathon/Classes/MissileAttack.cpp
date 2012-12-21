@@ -80,5 +80,19 @@ void MissileAttack::rotate(float r)
 
 bool MissileAttack::hit(cocos2d::CCSprite *player)
 {
+    if (isHit)
+        return false;
+    
+    CCPoint p1(0, distance - missile->getContentSize().height / 2);
+    CCAffineTransform transform = CCAffineTransformRotate(CCAffineTransformIdentity, angle);
+    p1 = CCPointApplyAffineTransform(p1, transform);
+    
+    CCPoint p2 = player->getPosition();
+    
+    float dist = sqrtf(powf(p1.x - p2.x, 2) + powf(p1.y - p2.y, 2));
+    
+    if (dist < player->getContentSize().width / 2)
+        return isHit = true;
+    
     return false;
 }
