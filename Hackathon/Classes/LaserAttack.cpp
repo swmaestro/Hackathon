@@ -66,9 +66,11 @@ void LaserAttack::rotate(float r)
 
 bool LaserAttack::hit(cocos2d::CCSprite *player)
 {
-    if (isHit)
-        return false;
-    
-    
-    return false;
+    if (distance < 120 + laser->getContentSize().height / 2 && (angle < M_PI / 20 || angle > M_PI * 2 - M_PI / 20))
+        if (isHit)
+            return false;
+        else
+            return isHit = true;
+    else
+        return isHit = false;
 }
