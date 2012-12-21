@@ -41,15 +41,17 @@ private:
     cocos2d::CCLabelTTF             *m_pPlayerScore[9];
     
     Network                         *m_pNetwork;
-    
+
+    cocos2d::CCMenuItemImage        *m_pBack;
+    cocos2d::CCMenu                 *m_pMenu;
     
     
 public:
-    Ranking(Network *pNetwork);
+    Ranking();
     ~Ranking();
     
 public:
-    bool init();
+    bool init(cocos2d::CCScene *pScene ,cocos2d::SEL_MenuHandler menu);
     
 private:
     bool _GetRankData(std::vector<RANK_DATA> &vData);

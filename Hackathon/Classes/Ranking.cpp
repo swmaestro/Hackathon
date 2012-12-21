@@ -13,7 +13,7 @@ using namespace cocos2d;
 using namespace rapidxml;
 using namespace std;
 
-Ranking::Ranking(Network *pNetwork)
+Ranking::Ranking()
 {
     for(int i=0; i<9; ++i)
     {
@@ -34,7 +34,7 @@ Ranking::~Ranking()
     delete m_pNetwork;
 }
 
-bool Ranking::init()
+bool Ranking::init(cocos2d::CCScene *pScene ,cocos2d::SEL_MenuHandler menu)
 {
     if( (GameScene::init() == NULL) )
         return false;
@@ -77,6 +77,13 @@ bool Ranking::init()
         addChild(m_pPlayerName[i]);
         addChild(m_pPlayerScore[i]);
     }
+    
+    m_pBack = CCMenuItemImage::create("backButton.png", "backButton.png", pScene, menu);
+    m_pBack->setPosition(ccp(-100,200));
+    
+    m_pMenu = CCMenu::createWithItem(m_pBack);
+    
+    addChild(m_pMenu);
     
     return true;
 }
