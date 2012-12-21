@@ -37,9 +37,12 @@ bool MainScene::init()
     platform->setPosition(CCPoint(winSize.width / 2, winSize.height / 4));
     addChild(platform);
     
+    background = CCSprite::create("background.png");
+    platform->addChild(background, 0);
+    
     center = CCSprite::create("center.png");
     center->setPosition(CCPoint(0, 0));
-    platform->addChild(center, 1);
+    platform->addChild(center, 3);
     
     for (int i = 0; i < 4; ++i)
     {
@@ -50,45 +53,44 @@ bool MainScene::init()
     slime = CCSprite::createWithTexture(slimeTex[0]);
     slime->setAnchorPoint(CCPoint(0.5, 0.2));
     slime->setPosition(CCPoint(0, 120));
-    platform->addChild(slime);
+    platform->addChild(slime, 4);
     
     CCDirector::sharedDirector()->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
     
     scheduleUpdate();
     
     pBackEffect = CCSprite::create("bigLeaf.png");
-    pBackEffect->setAnchorPoint(ccp(0.6,0.5));
-    pBackEffect->setPosition(ccp(winSize.width / 2, winSize.height / 4));
+    pBackEffect->setAnchorPoint(ccp(0.5,0.5));
     pBackEffect->setScale(1.5);
-    center->addChild(pBackEffect, -10);
-    
-    schedule(schedule_selector(MainScene::_backEffect), 1/60.f);
+    platform->addChild(pBackEffect, 1);
     return true;
 }
 
 void MainScene::update(float dt)
 {
     center->setRotation(center->getRotation() - rotate * 50 * dt);
+    pBackEffect->setRotation(center->getRotation());
+    background->setRotation(background->getRotation() - rotate * 10 * dt);
     for (std::list<Attack *>::iterator i = attacks.begin(), next; i != attacks.end(); ++i)
         (*i)->rotate(rotate * 50 * dt * M_PI / 180);
     
     static float t = 0;
     t += dt;
-    if (t > 0.25)
+    if (t > 0.05)
     {
         float r = CCRANDOM_0_1();
 
         Attack * attack;
         
-        if (r < 0.8)
+        if (r < 0.95)
             attack = NormalAttack::create();
-        else if (r < 0.9)
+        else if (r < 0.975)
             attack = MissileAttack::create();
         else
             attack = LaserAttack::create();
         
         attacks.push_back(attack);
-        platform->addChild(attack);
+        platform->addChild(attack, 2);
         t = 0;
     }
     

@@ -35,7 +35,7 @@ private:
     int rotate;
     
     CCLayer * platform;
-    CCSprite * center, * slime;
+    CCSprite * background, * center, * slime;
     CCTexture2D * slimeTex[4];
     
     std::list<Attack *> attacks;
