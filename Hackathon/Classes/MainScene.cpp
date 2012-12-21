@@ -58,7 +58,7 @@ bool MainScene::init()
 
 void MainScene::update(float dt)
 {
-    center->setRotation(center->getRotation() + rotate * 50 * dt);
+    center->setRotation(center->getRotation() - rotate * 50 * dt);
     for (std::list<Attack *>::iterator i = attacks.begin(), next; i != attacks.end(); ++i)
         (*i)->rotate(rotate * 50 * dt * M_PI / 180);
     
@@ -67,7 +67,6 @@ void MainScene::update(float dt)
     if (t > 0.25)
     {
         NormalAttack * attack = NormalAttack::create();
-        attack->init(CCRANDOM_0_1() * 2 * M_PI);
         attacks.push_back(attack);
         platform->addChild(attack);
         t = 0;

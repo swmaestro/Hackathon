@@ -10,7 +10,7 @@
 
 bool NormalAttack::init()
 {
-    if (!CCLayer::init())
+    if (!Attack::init())
         return false;
     
     isHit = false;
@@ -18,16 +18,13 @@ bool NormalAttack::init()
     sprite = CCSprite::create("dropper.png");
     addChild(sprite);
     
-    return true;
-}
-
-void NormalAttack::init(float angle)
-{
-    this->angle = angle;
+    angle = CCRANDOM_0_1() * 2 * M_PI;
     distance = 400;
     
     resetPosition();
     scheduleUpdate();
+    
+    return true;
 }
 
 void NormalAttack::resetPosition()

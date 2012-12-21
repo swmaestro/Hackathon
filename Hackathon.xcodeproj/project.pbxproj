@@ -30,6 +30,8 @@
 		C54788901684C16900802CD9 /* slime2.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788881684C16900802CD9 /* slime2.png */; };
 		C54788911684C16900802CD9 /* slime3.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788891684C16900802CD9 /* slime3.png */; };
 		C54788921684C16900802CD9 /* slime4.png in Resources */ = {isa = PBXBuildFile; fileRef = C547888A1684C16900802CD9 /* slime4.png */; };
+		C54788951684DF5100802CD9 /* MissileAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788931684DF5100802CD9 /* MissileAttack.cpp */; };
+		C54788981684DF7E00802CD9 /* LaserAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788961684DF7D00802CD9 /* LaserAttack.cpp */; };
 		C55037091684A21700B2DD25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55037081684A21700B2DD25 /* QuartzCore.framework */; };
 		C550370B1684A21700B2DD25 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C550370A1684A21700B2DD25 /* OpenGLES.framework */; };
 		C550370D1684A21700B2DD25 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C550370C1684A21700B2DD25 /* OpenAL.framework */; };
@@ -272,6 +274,10 @@
 		C54788881684C16900802CD9 /* slime2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime2.png; path = Resources/slime2.png; sourceTree = "<group>"; };
 		C54788891684C16900802CD9 /* slime3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime3.png; path = Resources/slime3.png; sourceTree = "<group>"; };
 		C547888A1684C16900802CD9 /* slime4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slime4.png; path = Resources/slime4.png; sourceTree = "<group>"; };
+		C54788931684DF5100802CD9 /* MissileAttack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MissileAttack.cpp; path = Classes/MissileAttack.cpp; sourceTree = "<group>"; };
+		C54788941684DF5100802CD9 /* MissileAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MissileAttack.h; path = Classes/MissileAttack.h; sourceTree = "<group>"; };
+		C54788961684DF7D00802CD9 /* LaserAttack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LaserAttack.cpp; path = Classes/LaserAttack.cpp; sourceTree = "<group>"; };
+		C54788971684DF7E00802CD9 /* LaserAttack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LaserAttack.h; path = Classes/LaserAttack.h; sourceTree = "<group>"; };
 		C55037041684A21700B2DD25 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55037081684A21700B2DD25 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C550370A1684A21700B2DD25 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -763,6 +769,10 @@
 				C547884F1684A69400802CD9 /* Attack.h */,
 				C54788521684A7BA00802CD9 /* NormalAttack.cpp */,
 				C54788531684A7BA00802CD9 /* NormalAttack.h */,
+				C54788931684DF5100802CD9 /* MissileAttack.cpp */,
+				C54788941684DF5100802CD9 /* MissileAttack.h */,
+				C54788961684DF7D00802CD9 /* LaserAttack.cpp */,
+				C54788971684DF7E00802CD9 /* LaserAttack.h */,
 			);
 			name = Attack;
 			sourceTree = "<group>";
@@ -1930,9 +1940,14 @@
 				C55039B21684A24A00B2DD25 /* MainScene.cpp in Sources */,
 				C54788501684A69400802CD9 /* Attack.cpp in Sources */,
 				C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */,
+<<<<<<< HEAD
+				C54788951684DF5100802CD9 /* MissileAttack.cpp in Sources */,
+				C54788981684DF7E00802CD9 /* LaserAttack.cpp in Sources */,
+=======
 				3C41C1001684E14E00D18BE7 /* GameScene.cpp in Sources */,
 				3C41C1011684E14E00D18BE7 /* Network.cpp in Sources */,
 				3C41C1021684E14E00D18BE7 /* Ranking.cpp in Sources */,
+>>>>>>> e62089e90b1d4a208cd76bf02704e5e26a28d9ea
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

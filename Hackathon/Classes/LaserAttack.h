@@ -1,20 +1,20 @@
 //
-//  NormalAttack.h
+//  LaserAttack.h
 //  Hackathon
 //
-//  Created by 강 건우 on 12. 12. 21..
+//  Created by 강 건우 on 12. 12. 22..
 //
 //
 
-#ifndef __Hackathon__NormalAttack__
-#define __Hackathon__NormalAttack__
+#ifndef __Hackathon__LaserAttack__
+#define __Hackathon__LaserAttack__
 
 #include "Attack.h"
 
-class NormalAttack : public Attack
+class LaserAttack : public Attack
 {
 public:
-    CREATE_FUNC(NormalAttack);
+    CREATE_FUNC(LaserAttack);
     bool init();
     
     void resetPosition();
@@ -27,11 +27,8 @@ public:
     
 private:
     CCSprite * sprite;
-    
     float angle;
-    float distance;
-    
     bool isHit;
 };
 
-#endif /* defined(__Hackathon__NormalAttack__) */
+#endif /* defined(__Hackathon__LaserAttack__) */
