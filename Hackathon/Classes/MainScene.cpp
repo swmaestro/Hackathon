@@ -63,6 +63,9 @@ bool MainScene::init()
     pBackEffect->setAnchorPoint(ccp(0.5,0.5));
     pBackEffect->setScale(1.5);
     platform->addChild(pBackEffect, 1);
+    
+    schedule(schedule_selector(MainScene::_backEffect), 1/60.f);
+    
     return true;
 }
 
@@ -114,10 +117,41 @@ void MainScene::update(float dt)
         
         if (!(*i)->enable())
         {
+            _particleEffect((*i)->getPosition());
             platform->removeChild(*i, true);
             attacks.remove(*i);
         }
     }
+}
+
+void MainScene::_particleEffect(CCPoint position)
+{
+    if( getChildByTag(10) )
+        removeChildByTag(10, true);
+    
+    m_pFlower = CCParticleFlower::create();
+    m_pFlower->setPosition(position);
+    m_pFlower->setAnchorPoint(ccp(0.5, 0.5));
+    
+    m_pFlower->setScale(1.f);
+    m_pFlower->setLifeVar(0);
+    m_pFlower->setLife(10);
+    m_pFlower->setSpeed(100);
+    m_pFlower->setSpeedVar(10);
+    m_pFlower->setEmissionRate(500);
+    
+    addChild(m_pFlower, 5, 10);
+    m_pFlower->setTexture( CCTextureCache::sharedTextureCache()->addImage("leaf.png"));
+    
+    CCCallFunc *call = CCCallFunc::create(this, callfunc_selector(MainScene::_particleEnd));
+    CCDelayTime *delay = CCDelayTime::create(0.1f);
+    CCFiniteTimeAction *sequence = CCSequence::create(delay, call);
+    runAction(sequence);
+}
+
+void MainScene::_particleEnd()
+{
+    m_pFlower->stopSystem();
 }
 
 void MainScene::draw()

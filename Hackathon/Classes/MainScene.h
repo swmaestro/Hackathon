@@ -40,9 +40,13 @@ private:
     
     std::list<Attack *> attacks;
     CCSprite *pBackEffect;
+    cocos2d::CCParticleFlower*    m_pFlower;
     
 public:
     void _backEffect(cocos2d::CCObject *pSender);
+    
+    void _particleEffect(cocos2d::CCPoint position);
+    void _particleEnd();
 };
 
 #endif /* defined(__Hackathon__MainScene__) */

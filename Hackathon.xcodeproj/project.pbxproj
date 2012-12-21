@@ -21,6 +21,7 @@
 		3C41C1231684EC0400D18BE7 /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C41C11F1684EC0400D18BE7 /* GameScene.cpp */; };
 		3C41C1241684EC0400D18BE7 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C41C1211684EC0400D18BE7 /* Network.cpp */; };
 		3C41C1281684EC2900D18BE7 /* aim.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C1271684EC2900D18BE7 /* aim.png */; };
+		3C41C14016850DA100D18BE7 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3C41C13E16850D9F00D18BE7 /* Menu.cpp */; };
 		C54788501684A69400802CD9 /* Attack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C547884E1684A69400802CD9 /* Attack.cpp */; };
 		C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788521684A7BA00802CD9 /* NormalAttack.cpp */; };
 		C547888B1684C16900802CD9 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788831684C16900802CD9 /* backButton.png */; };
@@ -264,6 +265,8 @@
 		3C41C1211684EC0400D18BE7 /* Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Network.cpp; path = Classes/Network.cpp; sourceTree = "<group>"; };
 		3C41C1221684EC0400D18BE7 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Network.h; path = Classes/Network.h; sourceTree = "<group>"; };
 		3C41C1271684EC2900D18BE7 /* aim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = aim.png; path = Resources/aim.png; sourceTree = "<group>"; };
+		3C41C13E16850D9F00D18BE7 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Menu.cpp; path = Classes/Menu.cpp; sourceTree = "<group>"; };
+		3C41C13F16850DA000D18BE7 /* Menu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Menu.h; path = Classes/Menu.h; sourceTree = "<group>"; };
 		C547884E1684A69400802CD9 /* Attack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attack.cpp; path = Classes/Attack.cpp; sourceTree = "<group>"; };
 		C547884F1684A69400802CD9 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attack.h; path = Classes/Attack.h; sourceTree = "<group>"; };
 		C54788521684A7BA00802CD9 /* NormalAttack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NormalAttack.cpp; path = Classes/NormalAttack.cpp; sourceTree = "<group>"; };
@@ -1672,6 +1675,8 @@
 				C55039A91684A21B00B2DD25 /* HelloWorldScene.cpp */,
 				C55039B01684A24A00B2DD25 /* MainScene.cpp */,
 				C55039B11684A24A00B2DD25 /* MainScene.h */,
+				3C41C13E16850D9F00D18BE7 /* Menu.cpp */,
+				3C41C13F16850DA000D18BE7 /* Menu.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1949,6 +1954,7 @@
 				3C41C11E1684EBDC00D18BE7 /* Ranking.cpp in Sources */,
 				3C41C1231684EC0400D18BE7 /* GameScene.cpp in Sources */,
 				3C41C1241684EC0400D18BE7 /* Network.cpp in Sources */,
+				3C41C14016850DA100D18BE7 /* Menu.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

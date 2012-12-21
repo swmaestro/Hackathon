@@ -11,7 +11,7 @@
 #include "cocos2d.h"
 #include "MainScene.h"
 
-#include "Ranking.h"
+#include "Menu.h"
 
 USING_NS_CC;
 
@@ -46,7 +46,10 @@ bool AppDelegate::applicationDidFinishLaunching()
   
     CCScene *pScene = pRanking->GetScene();
 /*/
-    CCScene *pScene = MainScene::scene();
+    Menu *pMenu = new Menu;
+    pMenu->init();
+    
+    CCScene *pScene = pMenu->GetScene();
 //*/
     // run
     pDirector->runWithScene(pScene);
