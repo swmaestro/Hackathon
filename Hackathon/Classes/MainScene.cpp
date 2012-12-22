@@ -12,6 +12,8 @@
 #include "MissileAttack.h"
 #include "LaserAttack.h"
 
+#include "SimpleAudioEngine.h"
+
 using namespace cocos2d;
 
 CCScene* MainScene::scene()
@@ -79,12 +81,19 @@ bool MainScene::init()
     
     schedule(schedule_selector(MainScene::_backEffect), 1/60.f);
     
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bgm.mp3", true);
+    
     return true;
 }
 
 void MainScene::update(float dt)
 {
-    if(m_isGameOver) return;
+    if(m_isGameOver)
+    {
+        
+        
+        return;
+    }
     
     center->setRotation(center->getRotation() - rotate * 50 * dt);
     pBackEffect->setRotation(center->getRotation());
@@ -140,6 +149,7 @@ void MainScene::update(float dt)
             pLife->setString(num);
             
             background->runAction(seq);
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("losticks.wav", false);
         }
     
     static float sl = 0;
