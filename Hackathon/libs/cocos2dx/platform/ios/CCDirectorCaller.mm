@@ -56,6 +56,7 @@ static id s_sharedDirectorCaller;
 -(void) alloc
 {
         interval = 1;
+    isOK = NO;
 }
 
 -(void) dealloc
@@ -91,6 +92,39 @@ static id s_sharedDirectorCaller;
 -(void) doCaller: (id) sender
 {
     cocos2d::CCDirector::sharedDirector()->mainLoop();
+}
+
+-(void) InputBox:(const char*)pszTitle pszMsg:(const char*)pszMsg
+{
+    NSString * title = (pszTitle) ? [NSString stringWithUTF8String : pszTitle] : nil;
+    NSString * msg = (pszMsg) ? [NSString stringWithUTF8String : pszMsg] : nil;
+    
+    UIAlertView *msgBox = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    msgBox.alertViewStyle = UIAlertViewStylePlainTextInput;
+    [msgBox autorelease];
+    [msgBox show];    
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+       UITextField *str = [alertView textFieldAtIndex:0];
+        alertText = [[NSString alloc] initWithString:str.text];
+        isOK = true;
+}
+
+-(const char*)GetAlertText
+{
+    return [alertText UTF8String];
+}
+
+-(void)setIsOK:(bool)is
+{
+    isOK = is;
+}
+
+-(bool)IsOK
+{
+    return isOK;
 }
 
 @end

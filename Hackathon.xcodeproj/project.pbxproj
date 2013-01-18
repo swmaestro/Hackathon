@@ -25,6 +25,7 @@
 		3C41C14916851F4100D18BE7 /* 03 ) 바람구두.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C14616851F3D00D18BE7 /* 03 ) 바람구두.mp3 */; };
 		3C41C14A16851F4100D18BE7 /* gameOver.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C14716851F3E00D18BE7 /* gameOver.png */; };
 		3C41C14B16851F4100D18BE7 /* losticks.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C14816851F3F00D18BE7 /* losticks.wav */; };
+		3C41C14D1685423D00D18BE7 /* creditBox.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C41C14C1685423B00D18BE7 /* creditBox.png */; };
 		C54788501684A69400802CD9 /* Attack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C547884E1684A69400802CD9 /* Attack.cpp */; };
 		C54788541684A7BA00802CD9 /* NormalAttack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C54788521684A7BA00802CD9 /* NormalAttack.cpp */; };
 		C547888B1684C16900802CD9 /* backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = C54788831684C16900802CD9 /* backButton.png */; };
@@ -273,6 +274,7 @@
 		3C41C14616851F3D00D18BE7 /* 03 ) 바람구두.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "03 ) 바람구두.mp3"; path = "Resources/03 ) 바람구두.mp3"; sourceTree = "<group>"; };
 		3C41C14716851F3E00D18BE7 /* gameOver.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gameOver.png; path = Resources/gameOver.png; sourceTree = "<group>"; };
 		3C41C14816851F3F00D18BE7 /* losticks.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = losticks.wav; path = Resources/losticks.wav; sourceTree = "<group>"; };
+		3C41C14C1685423B00D18BE7 /* creditBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = creditBox.png; path = Resources/creditBox.png; sourceTree = "<group>"; };
 		C547884E1684A69400802CD9 /* Attack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Attack.cpp; path = Classes/Attack.cpp; sourceTree = "<group>"; };
 		C547884F1684A69400802CD9 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Attack.h; path = Classes/Attack.h; sourceTree = "<group>"; };
 		C54788521684A7BA00802CD9 /* NormalAttack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NormalAttack.cpp; path = Classes/NormalAttack.cpp; sourceTree = "<group>"; };
@@ -836,6 +838,7 @@
 		C55037191684A21700B2DD25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3C41C14C1685423B00D18BE7 /* creditBox.png */,
 				3C41C14616851F3D00D18BE7 /* 03 ) 바람구두.mp3 */,
 				3C41C14716851F3E00D18BE7 /* gameOver.png */,
 				3C41C14816851F3F00D18BE7 /* losticks.wav */,
@@ -1774,6 +1777,7 @@
 				3C41C14916851F4100D18BE7 /* 03 ) 바람구두.mp3 in Resources */,
 				3C41C14A16851F4100D18BE7 /* gameOver.png in Resources */,
 				3C41C14B16851F4100D18BE7 /* losticks.wav in Resources */,
+				3C41C14D1685423D00D18BE7 /* creditBox.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

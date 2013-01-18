@@ -54,6 +54,26 @@ int CCApplication::run()
     return 0;
 }
 
+void CCApplication::uialertView(const char *pszTitle, const char *pszMsg)
+{
+    [[CCDirectorCaller sharedDirectorCaller] InputBox:pszTitle pszMsg:pszMsg];
+}
+
+const char* CCApplication::GetUIAlertViewText()
+{
+    return [[CCDirectorCaller sharedDirectorCaller] GetAlertText];
+}
+
+void CCApplication::SetisOK(bool is)
+{
+    [[CCDirectorCaller sharedDirectorCaller] setIsOK:is];
+}
+
+bool CCApplication::isOK()
+{
+    return [[CCDirectorCaller sharedDirectorCaller] IsOK];
+}
+
 void CCApplication::setAnimationInterval(double interval)
 {
     [[CCDirectorCaller sharedDirectorCaller] setAnimationInterval: interval ];

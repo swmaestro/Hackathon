@@ -15,6 +15,7 @@ class Menu : public GameScene
 {
 private:
     cocos2d::CCSprite           *m_pBackground;
+    cocos2d::CCSprite           *m_pCredit;
 
     cocos2d::CCMenu             *m_pMenu;
     cocos2d::CCMenuItemImage    *m_pMenuItem[3];

@@ -37,7 +37,12 @@ class CC_DLL CCApplication : public CCApplicationProtocol
 public:
     CCApplication();
     virtual ~CCApplication();
-        
+    
+    void uialertView(const char *pszTitle, const char *pszMsg);
+    const char* GetUIAlertViewText();
+    void SetisOK(bool is);
+    bool isOK();
+    
     /**
     @brief    Run the message loop.
     */

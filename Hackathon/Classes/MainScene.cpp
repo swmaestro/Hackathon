@@ -28,6 +28,9 @@ bool MainScene::init()
     if (!CCLayer::init())
         return false;
     
+    pNetwork = new Network;
+    CCApplication::sharedApplication()->SetisOK(false);
+    
     m_life = 100;
     m_score = 0;
     m_isGameOver = false;
@@ -77,14 +80,35 @@ bool MainScene::init()
     pBackEffect->setScale(1.5);
     platform->addChild(pBackEffect, 1);
     
-    schedule(schedule_selector(MainScene::_backEffect), 1/60.f);
+    pGameOver = CCSprite::create("gameOver.png");
+    pGameOver->setPosition(ccp(0, 400));
+    platform->addChild(pGameOver, 5);
     
     return true;
 }
 
+void MainScene::_sendRanking(const char *name, int score)
+{
+    const char *baseURL = "http://www.daram.pe.kr/soma/index.php?request=addRanking&ranker=%s&ranktime=0&rankscore=%d&requestWhen=0000";
+    char url[256];
+    sprintf(url, baseURL, name, score);
+    
+    CURL_DATA data;
+    pNetwork->connectHttp(url, &data);
+}
+
 void MainScene::update(float dt)
 {
-    if(m_isGameOver) return;
+    if(m_isGameOver)
+    {
+        if(CCApplication::sharedApplication()->isOK())
+        {
+            _sendRanking(CCApplication::sharedApplication()->GetUIAlertViewText(), m_score);
+            CCDirector::sharedDirector()->popScene();
+        }
+
+        return;
+    }
     
     center->setRotation(center->getRotation() - rotate * 50 * dt);
     pBackEffect->setRotation(center->getRotation());
@@ -127,6 +151,12 @@ void MainScene::update(float dt)
             else
             {
                 m_isGameOver = true;
+                CCMoveTo *move = CCMoveTo::create(1.5f, ccp(0, 200));
+                pGameOver->runAction(move);
+                CCDelayTime *delay = CCDelayTime::create(3.f);
+                CCCallFunc *call = CCCallFunc::create(this, callfunc_selector(MainScene::_gameOver));
+                CCFiniteTimeAction *sequence = CCSequence::create(delay, call);
+                runAction(sequence);
                 //게임오버 문구 출력
             }
             
@@ -176,32 +206,40 @@ void MainScene::update(float dt)
 
 void MainScene::_particleEffect(CCPoint position)
 {
-    if( getChildByTag(10) )
-        removeChildByTag(10, true);
-    
-    m_pFlower = CCParticleFlower::create();
-    m_pFlower->setPosition(position);
-    m_pFlower->setAnchorPoint(ccp(0.5, 0.5));
-    
-    m_pFlower->setScale(1.f);
-    m_pFlower->setLifeVar(0);
-    m_pFlower->setLife(10);
-    m_pFlower->setSpeed(100);
-    m_pFlower->setSpeedVar(10);
-    m_pFlower->setEmissionRate(500);
-    
-    addChild(m_pFlower, 5, 10);
-    m_pFlower->setTexture( CCTextureCache::sharedTextureCache()->addImage("leaf.png"));
-    
-    CCCallFunc *call = CCCallFunc::create(this, callfunc_selector(MainScene::_particleEnd));
-    CCDelayTime *delay = CCDelayTime::create(0.1f);
-    CCFiniteTimeAction *sequence = CCSequence::create(delay, call);
-    runAction(sequence);
+//    if( getChildByTag(10) )
+//        removeChildByTag(10, true);
+//    
+//    m_pFlower = CCParticleFlower::create();
+//    m_pFlower->setPosition(position);
+//    m_pFlower->setAnchorPoint(ccp(0.5, 0.5));
+//    
+//    m_pFlower->setScale(1.f);
+//    m_pFlower->setLifeVar(0);
+//    m_pFlower->setLife(10);
+//    m_pFlower->setSpeed(100);
+//    m_pFlower->setSpeedVar(10);
+//    m_pFlower->setEmissionRate(500);
+//    
+//    addChild(m_pFlower, 5, 10);
+//    m_pFlower->setTexture( CCTextureCache::sharedTextureCache()->addImage("leaf.png"));
+//    
+//    CCCallFunc *call = CCCallFunc::create(this, callfunc_selector(MainScene::_particleEnd));
+//    CCDelayTime *delay = CCDelayTime::create(0.1f);
+//    CCFiniteTimeAction *sequence = CCSequence::create(delay, call);
+//    runAction(sequence);
 }
 
 void MainScene::_particleEnd()
 {
-    m_pFlower->stopSystem();
+//    m_pFlower->stopSystem();
+}
+
+void MainScene::_gameOver(cocos2d::CCObject *pSender)
+{
+//    CCDirector::sharedDirector()->popScene();
+    char scoreTxt[20];
+    sprintf(scoreTxt, "점수 : %d", m_score);
+    CCApplication::sharedApplication()->uialertView("게임 끝", scoreTxt);
 }
 
 void MainScene::draw()
@@ -211,6 +249,8 @@ void MainScene::draw()
 
 bool MainScene::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 {
+    if(m_isGameOver) return true;
+    
     if (pTouch->getLocation().x < CCDirector::sharedDirector()->getWinSize().width / 2)
         rotate = -1;
     else
@@ -221,6 +261,8 @@ bool MainScene::ccTouchBegan(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 
 void MainScene::ccTouchMoved(cocos2d::CCTouch *pTouch, cocos2d::CCEvent *pEvent)
 {
+    if(m_isGameOver) return;
+
     if (pTouch->getLocation().x < CCDirector::sharedDirector()->getWinSize().width / 2)
         rotate = -1;
     else

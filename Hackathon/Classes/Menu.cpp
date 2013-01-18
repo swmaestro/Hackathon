@@ -44,7 +44,7 @@ bool Menu::init()
     m_pMenu = CCMenu::create(m_pMenuItem[0], m_pMenuItem[1], m_pMenuItem[2], NULL);
     
     addChild(m_pMenu);
-    
+        
     return true;
 }
 

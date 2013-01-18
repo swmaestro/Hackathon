@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "Attack.h"
+#include "Network.h"
 
 #include <list>
 
@@ -34,6 +35,7 @@ public:
 private:
     int rotate;
     
+    Network *pNetwork;
     CCLayer * platform;
     CCSprite * background, * center, * slime;
     CCTexture2D * slimeTex[4];
@@ -45,6 +47,7 @@ private:
 private:
     cocos2d::CCLabelTTF           *pScore;
     cocos2d::CCLabelTTF           *pLife;
+    cocos2d::CCSprite             *pGameOver;
     
 private:
     int     m_life;
@@ -52,6 +55,8 @@ private:
     bool    m_isGameOver;
     
 public:
+    void _sendRanking(const char *name, int score);
+    void _gameOver(cocos2d::CCObject *pSender);
     void _backEffect(cocos2d::CCObject *pSender);
     
     void _particleEffect(cocos2d::CCPoint position);

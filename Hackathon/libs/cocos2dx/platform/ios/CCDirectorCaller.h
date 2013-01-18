@@ -23,14 +23,25 @@
  ****************************************************************************/
 #import <Foundation/Foundation.h>
 
-@interface CCDirectorCaller : NSObject {
+@interface CCDirectorCaller : NSObject<UIAlertViewDelegate> {
         id displayLink;
         int interval;
+    
+    NSString *alertText;
+    bool isOK;
 }
 @property (readwrite) int interval;
+
 -(void) startMainLoop;
 -(void) doCaller: (id) sender;
 -(void) setAnimationInterval:(double)interval;
 +(id) sharedDirectorCaller;
 +(void) destroy;
+
+-(void) InputBox:(const char*)pszTitle pszMsg:(const char*)pszMsg;
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+-(const char*)GetAlertText;
+-(void)setIsOK:(bool)is;
+-(bool)IsOK;
+
 @end
