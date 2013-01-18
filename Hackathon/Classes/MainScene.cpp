@@ -12,6 +12,8 @@
 #include "MissileAttack.h"
 #include "LaserAttack.h"
 
+#include "SimpleAudioEngine.h"
+
 using namespace cocos2d;
 
 CCScene* MainScene::scene()
@@ -83,6 +85,8 @@ bool MainScene::init()
     pGameOver = CCSprite::create("gameOver.png");
     pGameOver->setPosition(ccp(0, 400));
     platform->addChild(pGameOver, 5);
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("bgm.mp3", true);
     
     return true;
 }
@@ -170,6 +174,7 @@ void MainScene::update(float dt)
             pLife->setString(num);
             
             background->runAction(seq);
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("losticks.wav", false);
         }
     
     static float sl = 0;
